@@ -34,7 +34,5 @@ def get_history(history_keyword,user):
         sql = "select search_keyword from search_history where user=%s and lower(search_keyword) like lower('%s')"%(username,keyword)
         cursor.execute(sql)
         results = cursor.fetchall()
-        total_hisotry =[row[0] for row in results]
+        total_hisotry =set([row[0] for row in results])
         return total_hisotry
-
-
