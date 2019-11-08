@@ -17,4 +17,4 @@ def create_search_table():
 	conn = create_connection()
 	with conn:
 		cursor = conn.cursor()
-		cursor.execute("create table if not exists search_history (user VARCHAR(255),search_keyword VARCHAR(255))")
+		cursor.execute(" create table if not exists search_history (user VARCHAR(255),search_keyword VARCHAR(255)) CHARACTER SET utf8 COLLATE utf8_general_ci;")
